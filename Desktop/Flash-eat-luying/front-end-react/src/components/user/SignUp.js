@@ -45,7 +45,7 @@ class SignUp extends React.Component {
         <div className="container login-wrapper">
           <div className="col-md-12  mt-5">
         
-            <h1 className="text-center">Sign Up</h1>
+            <h1 className="text-center font-italic text-success">Sign Up</h1>
 
             <div className="content-wrapper">
               <div className="form-group row cs5500-field cs5500-username">
@@ -56,7 +56,7 @@ class SignUp extends React.Component {
                 <div className="col-sm-9">
                   <input className="form-control"
                          id="userName"
-                         placeholder="Alice"
+                         placeholder="username"
                          onChange={this.handleChange}/>
                 </div>
               </div>
@@ -69,7 +69,7 @@ class SignUp extends React.Component {
                   <input type="password"
                          className="form-control"
                          id="password"
-                         placeholder="123qwe#$%"
+                         placeholder="password"
                          onChange={this.handleChange}/>
                 </div>
               </div>
@@ -83,7 +83,7 @@ class SignUp extends React.Component {
                   <input type="password"
                          className="form-control"
                          id="verifyPassword"
-                         placeholder="123qwe#$%"
+                         placeholder="password"
                          onChange={this.handleChange}/>
                 </div>
               </div>
@@ -97,7 +97,7 @@ class SignUp extends React.Component {
                   <input type="text"
                          className="form-control"
                          id="firstName"
-                         placeholder="Alice"
+                         placeholder="firstname"
                          onChange={this.handleChange}/>
                 </div>
               </div>
@@ -111,7 +111,7 @@ class SignUp extends React.Component {
                   <input type="text"
                          className="form-control"
                          id="lastName"
-                         placeholder="Wonderland"
+                         placeholder="lastname"
                          onChange={this.handleChange}/>
                 </div>
               </div>
@@ -139,7 +139,7 @@ class SignUp extends React.Component {
                   <input type="email"
                          className="form-control"
                          id="email"
-                         placeholder="alice@wonderland.com"
+                         placeholder="email"
                          onChange={this.handleChange}/>
                 </div>
               </div>
@@ -153,7 +153,7 @@ class SignUp extends React.Component {
                   <input type="text"
                          className="form-control"
                          id="address"
-                         placeholder="123 Street Name, City Name, State, ZipCode"
+                         placeholder="address"
                          onChange={this.handleChange}/>
                 </div>
               </div>
