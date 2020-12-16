@@ -1,0 +1,40 @@
+.logo {
+  height: 40px;
+}
+
+.cs5500-navbar {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  padding: 0.6rem 0.6rem;
+  background: black;
+}
+
+.cs5500-navbar a {
+  float: left;
+  text-align: center;
+  padding: 6px 6px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 0.25rem;
+}
+
+/* Add a red background color to navbar links on hover */
+.cs5500-navbar a:hover,
+.cs5500-dropdown:hover .cs5500-hamburger {
+  background-color: green;
+}
+
+.cs5500-navbar a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cs5500-lable {
+  float: left;
+  line-height: 40px;
+  font-size: 24px;
+  font-family: Impact, Charcoal, sans-serif;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
