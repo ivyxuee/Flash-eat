@@ -23,6 +23,17 @@
   background-color: green;
 }
 
+/* .navbar-nav > .active > a {
+  color: aqua;
+  background-color: chartreuse;
+} */
+.nav-item > a {
+  color: white;
+}
+.nav-item > a:hover {
+  color: green;
+}
+
 .cs5500-navbar a.active {
   background-color: #4caf50;
   color: white;

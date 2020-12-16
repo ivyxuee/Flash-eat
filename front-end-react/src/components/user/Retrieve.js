@@ -3,7 +3,7 @@ import logo from '../../assets/logo.png';
 import {Link} from "react-router-dom";
 import '../../styles/Signin.css';
 
-class SignIn extends React.Component {
+class Retrieve extends React.Component {
 
   constructor(props) {
     super(props)
@@ -11,20 +11,16 @@ class SignIn extends React.Component {
 
   state = {
     userName: '',
-    password: ''
+    firstName: '',
+    lastName: '',
+    email: ""
   }
 
   submitLogin = () => {
-    if (!(this.state.userName && this.state.password)) {
-      alert("Please provide both userName and password!")
+    if (!(this.state.userName && this.state.firstName && this.state.lastName && this.state.email)) {
+      alert("Please provide all required information or directly contact us flash_eat@gmail.com!")
     } else {
-      this.props.loginUser(this.state)
-      .then( () => {
-        if(this.props.authError == null) {
-          this.props.history.push('/profile');
-        }
-        else alert("Please provide valid userName and password!")
-      });
+        alert("Please check your email account with reset-password link!")
     }
   };
 
@@ -39,7 +35,7 @@ class SignIn extends React.Component {
       
         <div className="container">
           <div className="col-12 mt-5">
-            <h1 className='text-center'>Sign In</h1>
+            <h1 className='text-center'>Retrieve your password</h1>
 
             <div className="content-wrapper">
               <div className="form-group row cs5500-field cs5500-username">
@@ -47,37 +43,68 @@ class SignIn extends React.Component {
                        className="col-sm-2 col-form-label">
                   Username
                 </label>
-                <div className="col-sm-10">
+                <div className="col-sm-9">
                   <input className="form-control"
                          id="userName"
                          placeholder="Alice"
                          onChange={this.handleChange}/>
                 </div>
               </div>
-              <div className="form-group row cs5500-field cs5500-password">
-                <label htmlFor="password"
+              <div className="form-group row cs5500-field cs5500-username">
+                <label htmlFor="firstName"
                        className="col-sm-2 col-form-label">
-                  Password
+                  First Name
                 </label>
-                <div className="col-sm-10">
-                  <input type="password"
-                         className="form-control"
-                         id="password"
-                         placeholder="123qwe#$%"
+                <div className="col-sm-9">
+                  <input className="form-control"
+                         id="firstName"
+                         placeholder="Please enter your First Name"
                          onChange={this.handleChange}/>
                 </div>
               </div>
+              <div className="form-group row cs5500-field cs5500-username">
+                <label htmlFor="lastName"
+                       className="col-sm-2 col-form-label">
+                  Last Name
+                </label>
+                <div className="col-sm-9">
+                  <input className="form-control"
+                         id="lastName"
+                         placeholder="Please enter your Last Name"
+                         onChange={this.handleChange}/>
+                </div>
+              </div>
+              <div className="form-group row cs5500-field cs5500-username">
+                <label htmlFor="email"
+                       className="col-sm-2 col-form-label">
+                  Email
+                </label>
+                <div className="col-sm-9">
+                  <input className="form-control"
+                         id="email"
+                         placeholder="alice@wonderland.com"
+                         onChange={this.handleChange}/>
+                </div>
+              </div>
+              
               <div className="form-group row">
                 <label className="col-sm-2 col-form-label"></label>
                 <div className="col-sm-10">
 
-                  <div className="row mb-3 ">
+                  <div className="row mb-3">
                     <div className="col-sm-5 cs5500-login-btn mr-3">
-                      <a className="btn btn-primary btn-block cs5500-button cs5500-login mb-3"
+                      {/* <a className="btn btn-primary btn-block cs5500-button cs5500-login mb-3"
                          onClick={this.submitLogin}
                          role="button">
-                          Sign in
-                      </a>
+                          Submit
+                      </a> */}
+                      <Link to="/"
+                            className="btn btn-primary btn-block"
+                            onClick={this.submitLogin}
+                            role="button">
+                            
+                        SUBMIT
+                      </Link>
                     </div>
 
                     <div className="col-sm-5 cs5500-login-btn">
@@ -90,23 +117,15 @@ class SignIn extends React.Component {
                   </div>
 
                   <div className="row">
-                    <div className="col-4 cs5500-link cs5500-forgot-password">
-                      {/* <a href="#" role="button">Forgot Password?</a> */}
+                  <div className="col-6 cs5500-link cs5500-register">
                       <Link className="float-left"
-                            to="/retrivepassword"
+                            to="/login"
                             role="button">
-                        Forgot Password?
+                        Already have an account? Click here to sign in!
                       </Link>
                     </div>
-                    {/* <Link className="float-left"
-                            to="/retrivepassword"
-                            role="button">
-                        Forgot Password?
-                      </Link> */}
 
-
-                    <div className="col-6 cs5500-link cs5500-register ">
-                      
+                    <div className="col-6 cs5500-link cs5500-register">
                       <Link className="float-right"
                             to="/signup"
                             role="button">
@@ -137,4 +156,4 @@ class SignIn extends React.Component {
   }
 }
 
-export default SignIn;
+export default Retrieve;

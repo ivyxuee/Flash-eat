@@ -238,7 +238,7 @@ class EditProfile extends React.Component {
 
                 <div className="col-sm-5 cs5500-login-btn">
                   <Link to="/"
-                        className="btn btn-danger btn-block"
+                        className="btn btn-warning btn-block"
                         role="button">
                     Cancel
                   </Link>

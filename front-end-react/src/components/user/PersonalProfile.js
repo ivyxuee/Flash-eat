@@ -105,9 +105,9 @@ class Profile extends React.Component {
 
                     <div className="container">
                         <div className=" mt-5">
-                            <div className="text-center mb-3">
+                            {/* <div className="text-center mb-3">
                                 <img src={logo} className="form-logo"/>
-                            </div>
+                            </div> */}
                             <h1 className="text-center">Profile</h1>
 
                             { this.state.user &&

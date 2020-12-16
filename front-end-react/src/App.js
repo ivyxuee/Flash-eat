@@ -11,10 +11,12 @@ import ZomatoCities from "./components/zomato-cities";
 import ZomatoRestaurants from "./components/zomato-city-restaurants";
 import ZomatoRestaurantDetail from "./components/zomato-restaurant-detail";
 import SignInContainer from "./containers/SignInContainer";
+import DriverSignInContainer from "./containers/DriverSignInContainer";
 import SignUpContainer from "./containers/SignUpContainer";
 import ProfilesContainer from "./containers/ProfilesContainer";
 import PersonalProfileContainer from "./containers/PersonalProfileContainer";
 import GenericProfile from "./components/user/GenericProfile";
+import RetriveContainer from "./containers/RetrieveContainer";
 
 function App() {
   return (
@@ -33,7 +35,9 @@ function App() {
                     <ZomatoRestaurantDetail
                         restaurantID={props.match.params.restaurantID}/>}/>
             <Route path="/login" exact component={SignInContainer}/>
+            <Route path="/driver" exact component={DriverSignInContainer}/>
             <Route path="/signup" exact component={SignUpContainer}/>
+            <Route path="/retrivepassword" exact component={RetriveContainer}/>
             <Route path="/privacy" exact component={PrivacyComponent}/>
             <Route path="/profile"
                    exact component={ProfilesContainer}/>

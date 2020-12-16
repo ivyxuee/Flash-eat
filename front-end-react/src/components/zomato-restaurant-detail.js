@@ -142,6 +142,10 @@ class ZomatoRestaurantDetail extends React.Component {
     }
 
     createReview = (rid, userId) => {
+        if (!this.state.review){
+            alert("Please add at least one dish")
+            return;
+        }
         fetch(`http://localhost:3000/api/reviews/users/${this.props.user._id}/restaurants/${this.props.restaurantID}`, {
             method: "POST",
             body: JSON.stringify({review: this.state.review}),

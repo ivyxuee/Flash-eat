@@ -22,8 +22,8 @@ class SignUp extends React.Component {
   };
 
   registerNewUser = () => {
-    if (!(this.state.userName && this.state.password)) {
-      alert("Please provide the valid userName and password!")
+    if (!(this.state.userName && this.state.password && this.state.email)) {
+      alert("Please provide the valid userName, passWord, email accout!")
     } else if (this.state.password !== this.state.verifyPassword) {
       alert("Password does not match!")
     }else {
@@ -159,12 +159,12 @@ class SignUp extends React.Component {
                 </div>
               </div>
 
-              <div className="form-group row">
+              <div className="form-group row ">
                 <label className="col-sm-3"></label>
                 <div className="col-sm-9">
 
-                  <div className="row">
-                    <div className="col-sm-8 cs5500-login-btn mr-3">
+                  <div className="row ">
+                    <div className="col-sm-5 cs5500-login-btn mr-3">
                       <a className="btn btn-primary btn-block cs5500-button cs5500-register mb-3"
                          onClick={this.registerNewUser}
                          role="button">
@@ -172,9 +172,9 @@ class SignUp extends React.Component {
                       </a>
                     </div>
 
-                    <div className="col-sm-3 cs5500-login-btn">
+                    <div className="col-sm-5 cs5500-login-btn mx-auto">
                       <Link to="/"
-                            className="btn btn-danger btn-block"
+                            className="btn btn-warning btn-block"
                             role="button">
                         Cancel
                       </Link>
@@ -186,7 +186,7 @@ class SignUp extends React.Component {
                       <Link className="float-left cs5500-link cs5500-login"
                             to="/login"
                             role="button">
-                        Login
+                        Already have an account? Click here to Login
                       </Link>
                     </div>
 

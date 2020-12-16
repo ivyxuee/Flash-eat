@@ -9,7 +9,7 @@ class SignedOutLinks extends React.Component {
           <li className="nav-item nav-link mr-2"><NavLink
               to='/search'>Restaurants</NavLink></li>
               <li className="nav-item nav-link mr-2"><NavLink
-              to='/signin'>Drivers</NavLink></li>
+              to='/driver'>Drivers</NavLink></li>
           <li className="nav-item nav-link mr-2"><NavLink
               to='/profile'>Profile</NavLink></li>
           <li className="nav-item nav-link mr-2"><NavLink to='/login'>Sign

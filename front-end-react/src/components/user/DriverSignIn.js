@@ -3,7 +3,7 @@ import logo from '../../assets/logo.png';
 import {Link} from "react-router-dom";
 import '../../styles/Signin.css';
 
-class SignIn extends React.Component {
+class DriverSignIn extends React.Component {
 
   constructor(props) {
     super(props)
@@ -37,9 +37,9 @@ class SignIn extends React.Component {
   render() {
     return (
       
-        <div className="container">
+        <div className="container-driver">
           <div className="col-12 mt-5">
-            <h1 className='text-center'>Sign In</h1>
+            <h1 className='text-center'>Sign In As A Driver!</h1>
 
             <div className="content-wrapper">
               <div className="form-group row cs5500-field cs5500-username">
@@ -71,8 +71,8 @@ class SignIn extends React.Component {
                 <label className="col-sm-2 col-form-label"></label>
                 <div className="col-sm-10">
 
-                  <div className="row mb-3 ">
-                    <div className="col-sm-5 cs5500-login-btn mr-3">
+                  <div className="row mb-3">
+                    <div className="col-sm-7 cs5500-login-btn mr-3">
                       <a className="btn btn-primary btn-block cs5500-button cs5500-login mb-3"
                          onClick={this.submitLogin}
                          role="button">
@@ -80,7 +80,7 @@ class SignIn extends React.Component {
                       </a>
                     </div>
 
-                    <div className="col-sm-5 cs5500-login-btn">
+                    <div className="col-sm-4 cs5500-login-btn">
                       <Link to="/"
                             className="btn btn-warning btn-block"
                             role="button">
@@ -90,7 +90,7 @@ class SignIn extends React.Component {
                   </div>
 
                   <div className="row">
-                    <div className="col-4 cs5500-link cs5500-forgot-password">
+                    <div className="col-6 cs5500-link cs5500-forgot-password">
                       {/* <a href="#" role="button">Forgot Password?</a> */}
                       <Link className="float-left"
                             to="/retrivepassword"
@@ -98,19 +98,12 @@ class SignIn extends React.Component {
                         Forgot Password?
                       </Link>
                     </div>
-                    {/* <Link className="float-left"
-                            to="/retrivepassword"
-                            role="button">
-                        Forgot Password?
-                      </Link> */}
 
-
-                    <div className="col-6 cs5500-link cs5500-register ">
-                      
+                    <div className="col-6 cs5500-link cs5500-register">
                       <Link className="float-right"
                             to="/signup"
                             role="button">
-                        Sign up
+                        Sign up as a driver
                       </Link>
                     </div>
                   </div>
@@ -137,4 +130,4 @@ class SignIn extends React.Component {
   }
 }
 
-export default SignIn;
+export default DriverSignIn;

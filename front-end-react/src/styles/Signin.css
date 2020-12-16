@@ -1,0 +1,30 @@
+.btn-primary,
+.btn-warning {
+  background-color: #189d37 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited
+/* .btn-warning:active, */
+/* .btn-warning:visited 
+{ */ {
+  background-color: green !important;
+}
+
+.btn-warning:hover
+/* .btn-warning:active, */
+/* .btn-warning:visited 
+{ */ {
+  background-color: #ce182b !important;
+}
+
+/* body {
+  background-image: url("//i.ibb.co/7jHYP0g/background.png");
+} */
+
+.container-driver {
+  background: url("//i.ibb.co/7jHYP0g/background.png") no-repeat center center
+    fixed;
+  background-size: cover;
+}
