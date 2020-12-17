@@ -36,8 +36,8 @@ class DriverSignIn extends React.Component {
   render() {
     return (
         <div className="container-driver">
-          <div className="col-12 mt-5">
-            <h3 className='text-center font-italic text-success'>Sign In As A Driver!</h3>
+          <div className="col-12 mt-5 ">
+            <h1 className='text-center font-italic text-success'>Sign In As A Driver!</h1>
 
             <div className="content-wrapper">
               <div className="form-group row cs5500-field cs5500-username">

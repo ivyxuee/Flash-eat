@@ -34,7 +34,7 @@ class Retrieve extends React.Component {
       
         <div className="container">
           <div className="col-12 mt-5">
-            <h1 className='text-center'>Retrieve your password</h1>
+            <h1 className='text-center font-italic text-success'>Retrieve your password</h1>
 
             <div className="content-wrapper">
               <div className="form-group row cs5500-field cs5500-username">

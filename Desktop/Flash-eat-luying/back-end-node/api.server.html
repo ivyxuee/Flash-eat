@@ -1,0 +1,397 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<html>
+<head>
+  <title>APIs</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <ul class="list-group">
+      <h3>User</h3>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">Method</span>
+          <span class="col-5">URL</span>
+          <span class="col-4">Description</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/login'</span>
+          <span class="col-4">Verify userName and password match and return one user.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/register'</span>
+          <span class="col-4">Register, return one user.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/profile'</span>
+          <span class="col-4">If already login, return session.user.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/currentuser'</span>
+          <span class="col-4">Get current user.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/users'</span>
+          <span class="col-4">Create a user.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/users'</span>
+          <span class="col-4">Get all users.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/users/username/:username'</span>
+          <span class="col-4">Get user by username.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/users/:uid'</span>
+          <span class="col-4">Find user by userId.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">PUT</span>
+          <span class="col-5">'/api/users/:uid'</span>
+          <span class="col-4">Update user.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">DELETE</span>
+          <span class="col-5">'/api/users/:uid'</span>
+          <span class="col-4">Delete user.</span>
+        </div>
+      </li>
+      <h3>Payment</h3>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/payments'</span>
+          <span class="col-4">Find all payments.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/payments/:pid'</span>
+          <span class="col-4">Find payment by paymentId.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/payments/users/:uid'</span>
+          <span class="col-4">Find payments for user.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/payments'</span>
+          <span class="col-4">Create payment.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">PUT</span>
+          <span class="col-5">'/api/payments/:pid'</span>
+          <span class="col-4">Update payment.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">DELETE</span>
+          <span class="col-5">'/api/payments/:pid'</span>
+          <span class="col-4">Delete payment.</span>
+        </div>
+      </li>
+      <h3>Review</h3>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/reviews'</span>
+          <span class="col-4">Find all reviews.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/reviews/:rid'</span>
+          <span class="col-4">Find review by reviewId.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/reviews/users/:uid'</span>
+          <span class="col-4">Find reviews for user.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/reviews/restaurants/:rid'</span>
+          <span class="col-4">Find reviews for restaurant.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/reviews/users/:uid/restaurants/:rid'</span>
+          <span class="col-4">Create review.(userId and restaurantId not included in review object.)</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/reviews/restaurants/:rid/users/:uid'</span>
+          <span class="col-4">Create review.(userId and restaurantId not included in review object.)</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/reviews'</span>
+          <span class="col-4">Create review.(userId and restaurantId included in review object.)</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">DELETE</span>
+          <span class="col-5">'/api/reviews/:rid'</span>
+          <span class="col-4">Delete review.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/profile/:username'</span>
+          <span class="col-4">Find reviews by username.</span>
+        </div>
+      </li>
+      <h3>Order</h3>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/orders'</span>
+          <span class="col-4">Find all orders.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/orders/:oid'</span>
+          <span class="col-4">Find order by orderId.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/orders/users/:uid'</span>
+          <span class="col-4">Find order by user.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/orders/restaurants/:rid'</span>
+          <span class="col-4">Find order by restaurant.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/orders/users/:uid/restaurants/:rid'</span>
+          <span class="col-4">Create order.(userId and restaurantId not included in order object.)</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/orders/restaurants/:rid/users/:uid'</span>
+          <span class="col-4">Create order.(userId and restaurantId not included in order object.)</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/orders'</span>
+          <span class="col-4">Create order.(userId and restaurantId included in order object.)</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">DELETE</span>
+          <span class="col-5">'/api/orders/:oid'</span>
+          <span class="col-4">Delete order.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">PUT</span>
+          <span class="col-5">'/api/orders/:oid'</span>
+          <span class="col-4">Update order.</span>
+        </div>
+      </li>
+      <h3>ShoppingCart</h3>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/shoppingcart/users/:uid'</span>
+          <span class="col-4">Find shoppingCart for user.</span>
+        </div>
+      </li>
+      <h3>Menu</h3>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/menus/restaurants/:rid'</span>
+          <span class="col-4">Find menu for restaurant.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">POST</span>
+          <span class="col-5">'/api/menus'</span>
+          <span class="col-4">Create menu.(restaurantId included.)</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">DELETE</span>
+          <span class="col-5">'/api/menus/:mid'</span>
+          <span class="col-4">Delete menu.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">PUT</span>
+          <span class="col-5">'/api/menus/:mid'</span>
+          <span class="col-4">Add item.(item json object as req.body)</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">DELETE</span>
+          <span class="col-5">'/api/menus/:mid/items/:iid'</span>
+          <span class="col-4">Delete item.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/menus/:mid/items'</span>
+          <span class="col-4">Find items for menu.</span>
+        </div>
+      </li>
+      <h3>Item</h3>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">GET</span>
+          <span class="col-5">'/api/items/:iid'</span>
+          <span class="col-4">Find item by Id.</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <span class="col-2 offset-1">PUT</span>
+          <span class="col-5">'/api/items/:iid'</span>
+          <span class="col-4">Update item.</span>
+        </div>
+      </li>
+    </ul>
+    <br><br>
+    <div class="row">
+    <div class="col-3">
+      <h3>User</h3>
+      <ul class="list-group">
+        <li class="list-group-item">userName: String</li>
+        <li class="list-group-item">firstName: String</li>
+        <li class="list-group-item">lastName: String</li>
+        <li class="list-group-item">password: String</li>
+        <li class="list-group-item">phone: String</li>
+        <li class="list-group-item">email: String</li>
+        <li class="list-group-item">address: String</li>
+      </ul>
+    </div>
+    <div class="col-3">
+      <h3>Payment</h3>
+      <ul class="list-group">
+        <li class="list-group-item">userId: String</li>
+        <li class="list-group-item">paymentType: String</li>
+        <li class="list-group-item">cardType: String</li>
+        <li class="list-group-item">cardHolderName: String</li>
+        <li class="list-group-item">expirationDate: String</li>
+        <li class="list-group-item">securityCode: String</li>
+      </ul>
+    </div>
+    <div class="col-3">
+      <h3>Review</h3>
+      <ul class="list-group">
+        <li class="list-group-item">restaurantId: String</li>
+        <li class="list-group-item">userId: String</li>
+        <li class="list-group-item">timestamp: String</li>
+        <li class="list-group-item">review: String</li>
+        <li class="list-group-item">rating: Number</li>
+      </ul>
+    </div>
+    <div class="col-3">
+      <h3>Order</h3>
+      <ul class="list-group">
+        <li class="list-group-item">restaurantId: String</li>
+        <li class="list-group-item">userId: String</li>
+        <li class="list-group-item">orderOn: String</li>
+        <li class="list-group-item">items: [{ type: mongoose.Schema.ObjectId, ref: 'ItemModel' }],</li>
+        <li class="list-group-item">shippedOn: String</li>
+        <li class="list-group-item">total: Number</li>
+        <li class="list-group-item">orderStatus: {type: String, enum: ["PAID", "UNPAID", "SHIPPED", "DELIVERED", "CLOSED", "FINISHED"], default: 'UNPAID'}</li>
+      </ul>
+    </div>
+    <div class="col-3">
+      <h3>ShoppingCart</h3>
+      <ul class="list-group">
+        <li class="list-group-item">userId: String</li>
+        <li class="list-group-item">items: [{ type: mongoose.Schema.Types.ObjectId, ref: 'ItemModel' }]</li>
+      </ul>
+    </div>
+    <div class="col-3">
+      <h3>Menu</h3>
+      <ul class="list-group">
+        <li class="list-group-item">restaurantId: String</li>
+        <li class="list-group-item">items: [{ type: mongoose.Schema.Types.ObjectId, ref: 'ItemModel' }]</li>
+      </ul>
+    </div>
+    <div class="col-3">
+      <h3>Item</h3>
+      <ul class="list-group">
+        <li class="list-group-item">itemName: String</li>
+        <li class="list-group-item">price: Number</li>
+        <li class="list-group-item">quantity: Number</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
